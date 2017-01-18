@@ -1,0 +1,30 @@
+﻿<Window x:Class="EdgixshuaMediaLibrary.VideoGames.Add_New_Game"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EdgixshuaMediaLibrary.VideoGames"
+        mc:Ignorable="d"
+        Title="Add_New_Game" Height="417.39" Width="403.695">
+    <Window.Resources>
+        <DataTemplate x:Key="platformTemplate">
+            <WrapPanel Margin="0 5 0 5" Height="48">
+                <Image Width="48" Height="48" Source="{Binding Icon}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,15,0"/>
+                <Label Content="{Binding Name}" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+            </WrapPanel>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <Label x:Name="addNewGameTitleLabel" Content="Add New Game" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="25px" Margin="101,10,0,0"/>
+        <Label x:Name="platformLabel" Content="Select a platform" HorizontalAlignment="Left" FontWeight="Bold" VerticalAlignment="Top" Margin="22,201,0,0"/>
+        <ComboBox x:Name="platformComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="222" Margin="150,183,0,0" ItemTemplate="{StaticResource platformTemplate}"/>
+        <TextBox x:Name="addGameTitleTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" Margin="150,75,0,0"/>
+        <Label x:Name="addNewGameLabel" Content="Define Game Title" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,75,0,0"/>
+        <TextBox x:Name="addGameEditionTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" Margin="150,126,0,0"/>
+        <Label x:Name="addNewGameEditionLabel" Content="Define Game Editon" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,126,0,0"/>
+        <Label x:Name="addNewGameYearLabel" Content="Select Game Year" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,274,0,0"/>
+        <Button x:Name="addGameButton" Click="Add_Game_On_Click" Content="Add Game To Library" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Width="131" Margin="128,322,0,0" Height="40"/>
+        <ComboBox x:Name="addGameYearComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="150,274,0,0"/>
+
+    </Grid>
+</Window>
