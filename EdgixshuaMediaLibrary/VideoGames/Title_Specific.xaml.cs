@@ -20,6 +20,8 @@ namespace EdgixshuaMediaLibrary.VideoGames
     /// </summary>
     public partial class Title_Specific : Window
     {
+        VideoGamesRespository Repository = new VideoGamesRespository();
+
         public Title_Specific()
         {
             InitializeComponent();
@@ -29,7 +31,7 @@ namespace EdgixshuaMediaLibrary.VideoGames
         {
             string titleOrKeyword = titleSearchTextBox.Text;
 
-            var gameList = VideoGamesRespository.SearchByTitle(titleOrKeyword);
+            var gameList = Repository.SearchByTitle(titleOrKeyword);
 
             var orderedGameList = gameList.Select(s => new { s.Title, s.Edition, s.Platform, s.Year }).ToList()
                 .OrderBy(o => o.Title);

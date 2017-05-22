@@ -1,0 +1,1 @@
+C:\Projects\MediaLibrary\MediaLibraryTests\obj\Debug\MediaLibraryTests.csprojResolveAssemblyReference.cache

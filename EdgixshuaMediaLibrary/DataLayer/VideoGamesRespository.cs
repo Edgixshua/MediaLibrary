@@ -1,4 +1,6 @@
-﻿using EdgixshuaMediaLibrary.VideoGames;
+﻿using AutoMapper;
+using EdgixshuaMediaLibrary.Database;
+using EdgixshuaMediaLibrary.VideoGames;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,145 +13,44 @@ namespace EdgixshuaMediaLibrary.DataLayer
 {
     public class VideoGamesRespository
     {
-        public static List<VideoGame> GetEntireVideoGameLibrary()
+        public MediaLibraryEntities Entities = new MediaLibraryEntities();
+
+        public List<VideoGame> GetEntireVideoGameLibrary()
         {
-            var videoGameList = new List<VideoGame>();
+            var emptyList = new List<VideoGame>();
 
-            Connection DatabaseConnectionClass = new Connection();
+            var videoGames = Entities.Video_Games.ToList();
 
-            SqlConnection dbConnection = new SqlConnection(DatabaseConnectionClass.GetDatabaseConnectionString());
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader reader;
+            var videoGameLibary = Mapper.Map(videoGames, emptyList);
 
-            cmd.CommandText = "SELECT * FROM Video_Games";
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = dbConnection;
-
-            dbConnection.Open();
-
-            using (reader = cmd.ExecuteReader())
-            {
-                while (reader.Read())
-                {
-                    var game = new VideoGame();
-                    game.Id = Convert.ToInt32(reader["Game_Id"]);
-                    game.Title = reader["Game_Title"].ToString();
-                    game.Edition = reader["Edition"].ToString();
-                    game.Platform = reader["Platform"].ToString();
-                    game.Year = Convert.ToInt32(reader["Year"]);
-
-                    videoGameList.Add(game);
-                }
-            }
-
-            dbConnection.Close();
-
-            return videoGameList;
+            return videoGameLibary;
         }
 
-        public static List<VideoGame> SearchByPlatform(string platformName)
+        public List<Database.Video_Games> SearchByPlatform(string platformName)
         {
-            var videoGameList = new List<VideoGame>();
+            var videoGames = Entities.Video_Games.Where(w => w.Platform == platformName).ToList();
 
-            Connection DatabaseConnectionClass = new Connection();
-
-            SqlConnection dbConnection = new SqlConnection(DatabaseConnectionClass.GetDatabaseConnectionString());
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader reader;
-
-            cmd.CommandText = "SELECT * FROM Video_Games WHERE Platform = " + "'" + platformName + "'";
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = dbConnection;
-
-            dbConnection.Open();
-
-            using (reader = cmd.ExecuteReader())
-            {
-                while (reader.Read())
-                {
-                    var game = new VideoGame();
-                    game.Id = Convert.ToInt32(reader["Game_Id"]);
-                    game.Title = reader["Game_Title"].ToString();
-                    game.Edition = reader["Edition"].ToString();
-                    game.Platform = reader["Platform"].ToString();
-                    game.Year = Convert.ToInt32(reader["Year"]);
-
-                    videoGameList.Add(game);
-                }
-            }
-
-            dbConnection.Close();
-
-            return videoGameList;
+            return videoGames;
         }
 
-        public static List<VideoGame> SearchByTitle(string title)
+        public List<Database.Video_Games> SearchByTitle(string title)
         {
-            var videoGameList = new List<VideoGame>();
+            var videoGames = Entities.Video_Games.Where(w => w.Title == title).ToList();
 
-            Connection DatabaseConnectionClass = new Connection();
-
-            SqlConnection dbConnection = new SqlConnection(DatabaseConnectionClass.GetDatabaseConnectionString());
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader reader;
-
-            cmd.CommandText = "SELECT * FROM Video_Games WHERE Game_Title LIKE " + "'%" + title + "%'";
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = dbConnection;
-
-            dbConnection.Open();
-
-            using (reader = cmd.ExecuteReader())
-            {
-                while (reader.Read())
-                {
-                    var game = new VideoGame();
-                    game.Id = Convert.ToInt32(reader["Game_Id"]);
-                    game.Title = reader["Game_Title"].ToString();
-                    game.Edition = reader["Edition"].ToString();
-                    game.Platform = reader["Platform"].ToString();
-                    game.Year = Convert.ToInt32(reader["Year"]);
-
-                    videoGameList.Add(game);
-                }
-            }
-
-            dbConnection.Close();
-
-            return videoGameList;
+            return videoGames;
         }
 
-        public static bool AddNewGame(string gameTitle, string gameEdition, string gamePlatform, int gameYear)
+        public void AddNewGame(string gameTitle, string gameEdition, string gamePlatform, int gameYear)
         {
-            var videoGameList = new List<VideoGame>();
-
-            Connection DatabaseConnectionClass = new Connection();
-
-            SqlConnection dbConnection = new SqlConnection(DatabaseConnectionClass.GetDatabaseConnectionString());
-            SqlCommand cmd = new SqlCommand();
-
-            cmd.CommandText = "INSERT INTO dbo.Video_Games (Game_Title, Edition, Platform, Year)"
-                + "VALUES ('" + gameTitle + "', '"
-                + gameEdition + "', '"
-                + gamePlatform + "', "
-                + gameYear + ")";
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = dbConnection;
-
-            dbConnection.Open();
-
-            int sqlTest = cmd.ExecuteNonQuery();
-
-            dbConnection.Close();
-
-            if (sqlTest == 0)
+            Database.Video_Games videoGame = new Database.Video_Games
             {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+                Title = gameTitle,
+                Edition = gameEdition,
+                Platform = gamePlatform,
+                Year = gameYear
+            };
+
+            Entities.Video_Games.Add(videoGame);
         }
 
         public static bool CheckGameDoesNotExist(string gameTitle, string gameEdition, string gamePlatform)
@@ -163,8 +64,8 @@ namespace EdgixshuaMediaLibrary.DataLayer
             SqlDataReader reader;
 
             cmd.CommandText = "SELECT * FROM dbo.Video_Games "
-                + "WHERE Game_Title = '" + gameTitle + "'"
-                + "AND Edition = '" + gameEdition + "'" 
+                + "WHERE Title = '" + gameTitle + "'"
+                + "AND Edition = '" + gameEdition + "'"
                 + "AND Platform = '" + gamePlatform + "'";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = dbConnection;
@@ -176,8 +77,8 @@ namespace EdgixshuaMediaLibrary.DataLayer
                 while (reader.Read())
                 {
                     var game = new VideoGame();
-                    game.Id = Convert.ToInt32(reader["Game_Id"]);
-                    game.Title = reader["Game_Title"].ToString();
+                    game.Id = Convert.ToInt32(reader["Id"]);
+                    game.Title = reader["Title"].ToString();
                     game.Edition = reader["Edition"].ToString();
                     game.Platform = reader["Platform"].ToString();
                     game.Year = Convert.ToInt32(reader["Year"]);

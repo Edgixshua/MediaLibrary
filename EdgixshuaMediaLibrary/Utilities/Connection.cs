@@ -10,7 +10,7 @@ namespace EdgixshuaMediaLibrary
     {
         public string GetDatabaseConnectionString()
         {
-            string connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=Media_Library";
+            string connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=MediaLibrary";
 
             return connectionString;
         }

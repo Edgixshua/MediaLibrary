@@ -26,6 +26,8 @@ namespace EdgixshuaMediaLibrary.Video_Games
     {
         VideoGamesController controller = new VideoGamesController();
 
+        VideoGamesRespository Repository = new VideoGamesRespository();
+
         public Entire_Library()
         {
             InitializeComponent();
@@ -36,7 +38,7 @@ namespace EdgixshuaMediaLibrary.Video_Games
 
         private void dataGrid_Loaded(object sender, RoutedEventArgs e)
         {
-            var gameList = VideoGamesRespository.GetEntireVideoGameLibrary();
+            var gameList = Repository.GetEntireVideoGameLibrary();
 
             var grid = sender as DataGrid;
             var orderedGameList = gameList.Select(s => new { s.Title, s.Edition, s.Platform, s.Year }).ToList()
@@ -54,7 +56,7 @@ namespace EdgixshuaMediaLibrary.Video_Games
 
         private void Refresh_Button_Click(object sender, RoutedEventArgs e)
         {
-            var gameList = VideoGamesRespository.GetEntireVideoGameLibrary();
+            var gameList = Repository.GetEntireVideoGameLibrary();
 
             var orderedGameList = gameList.Select(s => new { s.Title, s.Edition, s.Platform, s.Year }).ToList()
                 .OrderBy(o => o.Title);

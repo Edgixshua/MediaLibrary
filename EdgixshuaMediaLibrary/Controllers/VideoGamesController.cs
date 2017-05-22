@@ -5,6 +5,8 @@ namespace EdgixshuaMediaLibrary.Controllers
 {
     class VideoGamesController
     {
+        VideoGamesRespository Repository = new VideoGamesRespository();
+
         public void AddGameToLibrary(string gameTitle, string gameEdition, string gamePlatform, int gameYear)
         {
             if (VideoGamesRespository.CheckGameDoesNotExist(gameTitle, gameEdition, gamePlatform) == true)
@@ -13,22 +15,15 @@ namespace EdgixshuaMediaLibrary.Controllers
             }
             else
             {
-                bool gameAddSuccessful = VideoGamesRespository.AddNewGame(gameTitle, gameEdition, gamePlatform, gameYear);
+                Repository.AddNewGame(gameTitle, gameEdition, gamePlatform, gameYear);
 
-                if (gameAddSuccessful == true)
-                {
-                    MessageBox.Show(gameTitle + " has been successfully added to the library");
-                }
-                else
-                {
-                    MessageBox.Show(gameTitle + " was not added to the library");
-                }
+                MessageBox.Show(gameTitle + " has been successfully added to the library");
             }
         }
 
         public int TotalGameCount()
         {
-            var entireGameLibrary = VideoGamesRespository.GetEntireVideoGameLibrary();
+            var entireGameLibrary = Repository.GetEntireVideoGameLibrary();
 
             var totalGameCount = entireGameLibrary.Count;
 
