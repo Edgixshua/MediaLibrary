@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EdgixshuaMediaLibrary.DataLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,13 @@ namespace EdgixshuaMediaLibrary
     /// </summary>
     public partial class MainWindow : Window
     {
+        MappingConfig config = new MappingConfig();
+
         public MainWindow()
         {
             InitializeComponent();
+
+            config.SetupMappings();
         }
 
         private void Video_Game_Button_Click(object sender, RoutedEventArgs e)

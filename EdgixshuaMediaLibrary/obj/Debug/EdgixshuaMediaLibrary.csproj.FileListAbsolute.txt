@@ -56,3 +56,4 @@ C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\bin\Debug\EntityFramework.SqlServ
 C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\obj\Debug\EdgixshuaMediaLibrary_Content.g.cs
 C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\bin\Debug\AutoMapper.dll
 C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\bin\Debug\AutoMapper.xml
+C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\obj\Debug\EdgixshuaMediaLibrary.csprojResolveAssemblyReference.cache

@@ -9,7 +9,7 @@ namespace EdgixshuaMediaLibrary.Controllers
 
         public void AddGameToLibrary(string gameTitle, string gameEdition, string gamePlatform, int gameYear)
         {
-            if (VideoGamesRespository.CheckGameDoesNotExist(gameTitle, gameEdition, gamePlatform) == true)
+            if (Repository.CheckIfGameExists(gameTitle, gameEdition, gamePlatform) == true)
             {
                 MessageBox.Show(gameTitle + " - " + gameEdition + " Edition " + "for " + gamePlatform + " already exists in the library");
             }

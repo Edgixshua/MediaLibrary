@@ -89,6 +89,7 @@
     <Compile Include="Database\Video_Games.cs">
       <DependentUpon>MediaLibrary.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataLayer\MappingConfig.cs" />
     <Compile Include="DataLayer\VideoGamesRespository.cs" />
     <Compile Include="Utilities\Connection.cs" />
     <Compile Include="DVD%27s\Dvd_Window.xaml.cs">
