@@ -32,19 +32,12 @@ namespace EdgixshuaMediaLibrary.Video_Games
         {
             InitializeComponent();
 
-            var totalGameCount = controller.TotalGameCount();
-            totalGameCountLabel.Content = totalGameCount;
+            totalGameCountLabel.Content = controller.TotalGameCount();
         }
 
         private void dataGrid_Loaded(object sender, RoutedEventArgs e)
-        {
-            var gameList = Repository.GetEntireVideoGameLibrary();
-
-            var grid = sender as DataGrid;
-            var orderedGameList = gameList.Select(s => new { s.Title, s.Edition, s.Platform, s.Year }).ToList()
-                .OrderBy(o => o.Title);            
-
-            grid.ItemsSource = orderedGameList;
+        {    
+            dataGrid.ItemsSource = Repository.GetEntireVideoGameLibrary().ToList().OrderBy(o => o.Title);
         }
 
         private void Game_Return_Button_Click(object sender, RoutedEventArgs e)
@@ -58,13 +51,9 @@ namespace EdgixshuaMediaLibrary.Video_Games
         {
             var gameList = Repository.GetEntireVideoGameLibrary();
 
-            var orderedGameList = gameList.Select(s => new { s.Title, s.Edition, s.Platform, s.Year }).ToList()
-                .OrderBy(o => o.Title);
+            dataGrid.ItemsSource = gameList.OrderBy(o => o.Title);
 
-            dataGrid.ItemsSource = orderedGameList;
-
-            var totalGameCount = controller.TotalGameCount();
-            totalGameCountLabel.Content = totalGameCount;
+            totalGameCountLabel.Content = gameList.Count;
         }
     }
 }

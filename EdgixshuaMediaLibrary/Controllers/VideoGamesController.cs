@@ -23,11 +23,7 @@ namespace EdgixshuaMediaLibrary.Controllers
 
         public int TotalGameCount()
         {
-            var entireGameLibrary = Repository.GetEntireVideoGameLibrary();
-
-            var totalGameCount = entireGameLibrary.Count;
-
-            return totalGameCount;
+            return Repository.GetEntireVideoGameLibrary().Count;
         }
     }
 }

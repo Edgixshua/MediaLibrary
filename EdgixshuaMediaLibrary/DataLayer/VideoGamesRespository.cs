@@ -1,14 +1,9 @@
 ﻿using AutoMapper;
 using EdgixshuaMediaLibrary.Database;
 using EdgixshuaMediaLibrary.VideoGames;
-using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.Entity;
-using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EdgixshuaMediaLibrary.DataLayer
 {
@@ -28,7 +23,7 @@ namespace EdgixshuaMediaLibrary.DataLayer
 
         public List<VideoGame> SearchByTitle(string title)
         {
-            return Mapper.Map<List<VideoGame>>(Entities.Video_Games.Where(w => w.Title == title).ToList());
+            return Mapper.Map<List<VideoGame>>(Entities.Video_Games.Where(w => w.Title.Contains(title)).ToList());
         }
 
         public bool CheckIfGameExists(string gameTitle, string gameEdition, string gamePlatform)

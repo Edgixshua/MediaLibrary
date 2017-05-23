@@ -29,14 +29,7 @@ namespace EdgixshuaMediaLibrary.VideoGames
 
         private void Load_Data(object sender, RoutedEventArgs e)
         {
-            string titleOrKeyword = titleSearchTextBox.Text;
-
-            var gameList = Repository.SearchByTitle(titleOrKeyword);
-
-            var orderedGameList = gameList.Select(s => new { s.Title, s.Edition, s.Platform, s.Year }).ToList()
-                .OrderBy(o => o.Title);
-
-            dataGrid.ItemsSource = orderedGameList;
+            dataGrid.ItemsSource = Repository.SearchByTitle(titleSearchTextBox.Text).OrderBy(o => o.Title);
         }
 
         private void Game_Return_Button_Click(object sender, RoutedEventArgs e)

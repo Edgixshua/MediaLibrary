@@ -3,6 +3,7 @@ using System.Data;
 using System.Linq;
 using System.Windows;
 using EdgixshuaMediaLibrary.DataLayer;
+using EdgixshuaMediaLibrary.Controllers;
 
 namespace EdgixshuaMediaLibrary.VideoGames
 {
@@ -12,6 +13,8 @@ namespace EdgixshuaMediaLibrary.VideoGames
     public partial class Platform_Specific : Window
     {
         List<GamePlatforms> gamePlaformList = new List<GamePlatforms>();
+
+        VideoGamesController Controller = new VideoGamesController();
 
         VideoGamesRespository Repository = new VideoGamesRespository();
 
@@ -39,18 +42,11 @@ namespace EdgixshuaMediaLibrary.VideoGames
         {
             GamePlatforms platformToSearch = platformComboBox.SelectedItem as GamePlatforms;
 
-            string platformName = platformToSearch.Name;
+            var videoGameList = Repository.SearchByPlatform(platformToSearch.Name);
 
-            var gameList = Repository.SearchByPlatform(platformName);
+            dataGrid.ItemsSource = videoGameList.OrderBy(o => o.Title);
 
-            var orderedGameList = gameList.Select(s => new { s.Title, s.Edition, s.Platform, s.Year }).ToList()
-                .OrderBy(o => o.Title);
-
-            dataGrid.ItemsSource = orderedGameList;
-
-            int gameCount = orderedGameList.Count();
-
-            totalGameCountLabel.Content = gameCount;
+            totalGameCountLabel.Content = videoGameList.Count();
         }
 
         private void Game_Return_Button_Click(object sender, RoutedEventArgs e)
