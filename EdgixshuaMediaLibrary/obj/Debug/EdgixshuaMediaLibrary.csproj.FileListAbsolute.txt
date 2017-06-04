@@ -56,3 +56,4 @@ C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\obj\Debug\EdgixshuaMediaLibrary.P
 C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\obj\Debug\EdgixshuaMediaLibrary.csproj.GenerateResource.Cache
 C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\obj\Debug\EdgixshuaMediaLibrary.exe
 C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\obj\Debug\EdgixshuaMediaLibrary.pdb
+C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\obj\Debug\EdgixshuaMediaLibrary.csprojResolveAssemblyReference.cache

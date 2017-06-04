@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdgixshuaMediaLibrary", "EdgixshuaMediaLibrary\EdgixshuaMediaLibrary.csproj", "{D41D83F1-0832-479A-ADBB-3B3DB1B76B9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaLibraryTests", "MediaLibraryTests\MediaLibraryTests.csproj", "{C80C7760-6343-42B7-98E0-014E980E819D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaLibraryTests", "MediaLibraryTests\MediaLibraryTests.csproj", "{D0765849-E4EE-49B6-988E-2A861797E2CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{D41D83F1-0832-479A-ADBB-3B3DB1B76B9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D41D83F1-0832-479A-ADBB-3B3DB1B76B9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D41D83F1-0832-479A-ADBB-3B3DB1B76B9D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C80C7760-6343-42B7-98E0-014E980E819D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C80C7760-6343-42B7-98E0-014E980E819D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C80C7760-6343-42B7-98E0-014E980E819D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C80C7760-6343-42B7-98E0-014E980E819D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0765849-E4EE-49B6-988E-2A861797E2CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0765849-E4EE-49B6-988E-2A861797E2CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0765849-E4EE-49B6-988E-2A861797E2CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0765849-E4EE-49B6-988E-2A861797E2CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
