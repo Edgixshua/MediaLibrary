@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace EdgixshuaMediaLibrary.VideoGames
 {
     public class GamePlatforms
     {
-        public string Icon { get; set; }
+        public Bitmap Icon { get; set; }
 
         public string Name { get; set; }
     }

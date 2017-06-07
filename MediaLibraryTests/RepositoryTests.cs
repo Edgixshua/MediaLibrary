@@ -34,7 +34,13 @@ namespace MediaLibraryTests
 
             mockContext.Setup(s => s.Video_Games).Returns(mockDbSet.Object);
 
-            _repository.AddNewGame("Rocket League", "Standard", "Playstation 4", 2014);
+            //_repository.AddNewGame(new Database.Video_Games()
+            //{
+            //    Title = "Rocket League",
+            //    Edition = "Standard,
+            //    Platform = "Playstation 4",
+            //    Year = 2014
+            //});
 
             _entities.Video_Games.Add(new Video_Games { Title = "Rocket League", Edition = "Standard", Platform = "Playstation 4", Year = 2014 });
             _entities.Video_Games.Add(new Video_Games { Title = "Uncharted 4", Edition = "Standard", Platform = "Playstation 4", Year = 2016 });
@@ -44,18 +50,45 @@ namespace MediaLibraryTests
         [TestMethod]
         public void AddNewVideoGame()
         {
-            var mockDbSet = new Mock<DbSet<Video_Games>>();
-            List<VideoGame> expectedMapping = new List<VideoGame>();
+            var fakeLibrary = new FakeMediaLibraryEntities();
+            var repo = new VideoGamesRespository(fakeLibrary);
+            
+           
 
-            var entities = new MediaLibraryEntities()
-            {
-                //Video_Games = mockDbSet
-            };
-            var repo = new VideoGamesRespository(_entities);
-
-            var mapped = repo.GetEntireVideoGameLibrary();
-            mapped.ShouldBe(expectedMapping);
+            //repo.AddNewGame(new Video_Games
+            //{
+            //    Title = "Rocket League",
+            //    Edition = "Standard,
+            //    Platform = "Playstation 4",
+            //    Year = 2014
+            //}).ShouldBe(1);
         }
+    }
+    
+    public class FakeMediaLibraryEntities : MediaLibraryEntities
+    {
+        public List<Video_Games> Games { get; set; }
+        int _rowsAltered;
+
+        public FakeMediaLibraryEntities() : this(0) {
+        }
+
+        public FakeMediaLibraryEntities(int rowsAltered) {
+            _rowsAltered = rowsAltered;
+            Games = new List<Video_Games>();
+        }
+
+        public override int SaveChanges()
+        {
+            return _rowsAltered;
+        }
+
+        //public override DbSet<Video_Games> Video_Games {
+        //    get => {
+        //        var dataset = new DbSet<Video_Games>();
+        //    }
+        //    set => base.Video_Games = value;
+        //}
     }
 }
 

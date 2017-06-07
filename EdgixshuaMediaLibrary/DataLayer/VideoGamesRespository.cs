@@ -7,23 +7,36 @@ using System.Linq;
 
 namespace EdgixshuaMediaLibrary.DataLayer
 {
+    public class FakeVideoGamesRespository : VideoGamesRespository
+    {
+        protected override List<VideoGame> Map(object value)
+        {
+            return null;
+        }
+    }
+
     public class VideoGamesRespository
     {
         public MediaLibraryEntities Entities;
+        
 
         public VideoGamesRespository()
         {
             Entities = new MediaLibraryEntities();
         }
 
-        public VideoGamesRespository(MediaLibraryEntities entities)
+        public VideoGamesRespository(MediaLibraryEntities entities) 
         {
             Entities = entities;
         }
 
+        protected virtual List<VideoGame> Map(object value) {
+            return Mapper.Map<List<VideoGame>>(value);
+        }
+
         public List<VideoGame> GetEntireVideoGameLibrary()
         {
-            return Mapper.Map<List<VideoGame>>(Entities.Video_Games.ToList());
+            return Map(Entities.Video_Games.ToList());
         }
 
         public List<VideoGame> SearchByPlatform(string platformName)
@@ -48,16 +61,8 @@ namespace EdgixshuaMediaLibrary.DataLayer
             }
         }
 
-        public void AddNewGame(string gameTitle, string gameEdition, string gamePlatform, int gameYear)
+        public void AddNewGame(Database.Video_Games videoGame)
         {
-            Database.Video_Games videoGame = new Database.Video_Games
-            {
-                Title = gameTitle,
-                Edition = gameEdition,
-                Platform = gamePlatform,
-                Year = gameYear
-            };
-
             Entities.Video_Games.Add(videoGame);
             Entities.SaveChanges();
         }

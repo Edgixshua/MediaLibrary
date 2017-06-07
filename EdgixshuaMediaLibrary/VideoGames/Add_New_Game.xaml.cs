@@ -18,19 +18,19 @@ namespace EdgixshuaMediaLibrary.VideoGames
         public Add_New_Game()
         {
             InitializeComponent();
-            gamePlaformList.Add(new GamePlatforms { Icon = @"C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\VideoGames\VideoGameAssets\ps4_icon.jpg", Name = "Playstation 4" });
-            gamePlaformList.Add(new GamePlatforms { Icon = @"C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\VideoGames\VideoGameAssets\xbox_360_icon.png", Name = "Xbox 360" });
-            gamePlaformList.Add(new GamePlatforms { Icon = @"C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\VideoGames\VideoGameAssets\asus_icon.png", Name = "PC" });
-            gamePlaformList.Add(new GamePlatforms { Icon = @"C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\VideoGames\VideoGameAssets\wii_icon.jpg", Name = "Wii" });
-            gamePlaformList.Add(new GamePlatforms { Icon = @"C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\VideoGames\VideoGameAssets\xbox_icon.png", Name = "Xbox" });
-            gamePlaformList.Add(new GamePlatforms { Icon = @"C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\VideoGames\VideoGameAssets\playstation2_icon.gif", Name = "Playstation 2" });
-            gamePlaformList.Add(new GamePlatforms { Icon = @"C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\VideoGames\VideoGameAssets\gamecube_icon.png", Name = "Gamecube" });
-            gamePlaformList.Add(new GamePlatforms { Icon = @"C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\VideoGames\VideoGameAssets\playstation_icon.png", Name = "Playstation" });
-            gamePlaformList.Add(new GamePlatforms { Icon = @"C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\VideoGames\VideoGameAssets\ds_icon.png", Name = "DS" });
-            gamePlaformList.Add(new GamePlatforms { Icon = @"C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\VideoGames\VideoGameAssets\3ds_icon.png", Name = "3DS" });
-            gamePlaformList.Add(new GamePlatforms { Icon = @"C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\VideoGames\VideoGameAssets\psp_icon.png", Name = "PSP" });
-            gamePlaformList.Add(new GamePlatforms { Icon = @"C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\VideoGames\VideoGameAssets\gameboyadvance_icon.jpg", Name = "Gameboy Advance" });
-            gamePlaformList.Add(new GamePlatforms { Icon = @"C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\VideoGames\VideoGameAssets\virtualconsole_icon.jpg", Name = "Virtual Console" });
+            gamePlaformList.Add(new GamePlatforms { Icon = Properties.Resources.sony_ps4_logo, Name = "Playstation 4" });
+            gamePlaformList.Add(new GamePlatforms { Icon = Properties.Resources.xbox_360_icon, Name = "Xbox 360" });
+            gamePlaformList.Add(new GamePlatforms { Icon = Properties.Resources.asus_icon, Name = "PC" });
+            gamePlaformList.Add(new GamePlatforms { Icon = Properties.Resources.wii_icon, Name = "Wii" });
+            gamePlaformList.Add(new GamePlatforms { Icon = Properties.Resources.xbox_icon, Name = "Xbox" });
+            gamePlaformList.Add(new GamePlatforms { Icon = Properties.Resources.playstation2_icon, Name = "Playstation 2" });
+            gamePlaformList.Add(new GamePlatforms { Icon = Properties.Resources.gamecube_icon, Name = "Gamecube" });
+            gamePlaformList.Add(new GamePlatforms { Icon = Properties.Resources.playstation_icon, Name = "Playstation" });
+            gamePlaformList.Add(new GamePlatforms { Icon = Properties.Resources.ds_icon, Name = "DS" });
+            gamePlaformList.Add(new GamePlatforms { Icon = Properties.Resources._3ds_icon, Name = "3DS" });
+            gamePlaformList.Add(new GamePlatforms { Icon = Properties.Resources.psp_icon, Name = "PSP" });
+            gamePlaformList.Add(new GamePlatforms { Icon = Properties.Resources.gameboyadvance_icon, Name = "Gameboy Advance" });
+            gamePlaformList.Add(new GamePlatforms { Icon = Properties.Resources.virtualconsole_icon, Name = "Virtual Console" });
             platformComboBox.ItemsSource = gamePlaformList;
             platformComboBox.SelectedIndex = 0;
 
