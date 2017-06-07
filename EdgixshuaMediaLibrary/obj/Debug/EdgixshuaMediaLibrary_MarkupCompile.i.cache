@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\obj\Debug\
+C:\Projects\Casual\MediaLibrary\EdgixshuaMediaLibrary\obj\Debug\
 EdgixshuaMediaLibrary
 none
 false
 DEBUG;TRACE
-C:\Projects\MediaLibrary\EdgixshuaMediaLibrary\App.xaml
+C:\Projects\Casual\MediaLibrary\EdgixshuaMediaLibrary\App.xaml
 7-975718536
 2502484314
-251654390783
-191222239682
+251606140936
+191767981655
 DVD's\Dvd_Window.xaml;MainWindow.xaml;VideoGames\Add_New_Game.xaml;VideoGames\Entire_Library.xaml;VideoGames\Platform_Specific.xaml;VideoGames\Title_Specific.xaml;VideoGames\Video_Game_Window.xaml;
 
-False
+True
 

@@ -9,7 +9,17 @@ namespace EdgixshuaMediaLibrary.DataLayer
 {
     public class VideoGamesRespository
     {
-        public MediaLibraryEntities Entities = new MediaLibraryEntities();
+        public MediaLibraryEntities Entities;
+
+        public VideoGamesRespository()
+        {
+            Entities = new MediaLibraryEntities();
+        }
+
+        public VideoGamesRespository(MediaLibraryEntities entities)
+        {
+            Entities = entities;
+        }
 
         public List<VideoGame> GetEntireVideoGameLibrary()
         {
