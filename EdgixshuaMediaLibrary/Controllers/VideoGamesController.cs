@@ -1,4 +1,5 @@
-﻿using EdgixshuaMediaLibrary.DataLayer;
+﻿using EdgixshuaMediaLibrary.Database;
+using EdgixshuaMediaLibrary.DataLayer;
 using System.Windows;
 
 namespace EdgixshuaMediaLibrary.Controllers

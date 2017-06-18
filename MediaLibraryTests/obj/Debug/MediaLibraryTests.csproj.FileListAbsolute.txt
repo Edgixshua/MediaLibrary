@@ -4,10 +4,8 @@ C:\Projects\MediaLibrary\MediaLibraryTests\bin\Debug\EdgixshuaMediaLibrary.exe
 C:\Projects\MediaLibrary\MediaLibraryTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Projects\MediaLibrary\MediaLibraryTests\bin\Debug\Shouldly.dll
 C:\Projects\MediaLibrary\MediaLibraryTests\bin\Debug\AutoMapper.dll
-C:\Projects\MediaLibrary\MediaLibraryTests\bin\Debug\EntityFramework.dll
 C:\Projects\MediaLibrary\MediaLibraryTests\bin\Debug\EdgixshuaMediaLibrary.pdb
 C:\Projects\MediaLibrary\MediaLibraryTests\bin\Debug\AutoMapper.xml
-C:\Projects\MediaLibrary\MediaLibraryTests\bin\Debug\EntityFramework.xml
 C:\Projects\MediaLibrary\MediaLibraryTests\obj\Debug\MediaLibraryTests.dll
 C:\Projects\MediaLibrary\MediaLibraryTests\obj\Debug\MediaLibraryTests.pdb
 C:\Projects\Casual\MediaLibrary\MediaLibraryTests\obj\Debug\MediaLibraryTests.csprojResolveAssemblyReference.cache
@@ -27,3 +25,8 @@ C:\Projects\Casual\MediaLibrary\MediaLibraryTests\bin\Debug\Castle.Core.dll
 C:\Projects\Casual\MediaLibrary\MediaLibraryTests\bin\Debug\Moq.dll
 C:\Projects\Casual\MediaLibrary\MediaLibraryTests\bin\Debug\Castle.Core.xml
 C:\Projects\Casual\MediaLibrary\MediaLibraryTests\bin\Debug\Moq.xml
+C:\Projects\MediaLibrary\MediaLibraryTests\bin\Debug\Castle.Core.dll
+C:\Projects\MediaLibrary\MediaLibraryTests\bin\Debug\Moq.dll
+C:\Projects\MediaLibrary\MediaLibraryTests\bin\Debug\Castle.Core.xml
+C:\Projects\MediaLibrary\MediaLibraryTests\bin\Debug\Moq.xml
+C:\Projects\MediaLibrary\MediaLibraryTests\obj\Debug\MediaLibraryTests.csprojResolveAssemblyReference.cache
