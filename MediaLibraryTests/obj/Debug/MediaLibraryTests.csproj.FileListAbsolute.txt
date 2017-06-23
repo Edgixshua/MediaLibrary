@@ -20,7 +20,6 @@ C:\Projects\Casual\MediaLibrary\MediaLibraryTests\bin\Debug\AutoMapper.dll
 C:\Projects\Casual\MediaLibrary\MediaLibraryTests\bin\Debug\EdgixshuaMediaLibrary.pdb
 C:\Projects\Casual\MediaLibrary\MediaLibraryTests\bin\Debug\EdgixshuaMediaLibrary.exe.config
 C:\Projects\Casual\MediaLibrary\MediaLibraryTests\bin\Debug\AutoMapper.xml
-C:\Projects\Casual\MediaLibrary\MediaLibraryTests\bin\Debug\EntityFramework.xml
 C:\Projects\Casual\MediaLibrary\MediaLibraryTests\bin\Debug\Castle.Core.dll
 C:\Projects\Casual\MediaLibrary\MediaLibraryTests\bin\Debug\Moq.dll
 C:\Projects\Casual\MediaLibrary\MediaLibraryTests\bin\Debug\Castle.Core.xml

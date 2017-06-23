@@ -2,19 +2,18 @@
 using EdgixshuaMediaLibrary.Database;
 using EdgixshuaMediaLibrary.VideoGames;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 
 namespace EdgixshuaMediaLibrary.DataLayer
 {
     public class VideoGamesRespository
     {
+        public MediaLibraryEntities Entities;
+
         public VideoGamesRespository(MediaLibraryEntities entities)
         {
             Entities = entities;
         }
-
-        public MediaLibraryEntities Entities;
         
         public VideoGamesRespository()
         {
@@ -43,14 +42,7 @@ namespace EdgixshuaMediaLibrary.DataLayer
 
         public bool CheckIfGameExists(string gameTitle, string gameEdition, string gamePlatform)
         {
-            if (!(Entities.Video_Games.Any(game => game.Title == gameTitle && game.Platform == gamePlatform && game.Edition == gameEdition)))
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return Entities.Video_Games.Any(game => game.Title == gameTitle && game.Platform == gamePlatform && game.Edition == gameEdition);
         }
 
         public void AddNewGame(string gameTitle, string gameEdition, string gamePlatform, int gameYear)
