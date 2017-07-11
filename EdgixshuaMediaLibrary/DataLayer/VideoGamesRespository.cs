@@ -40,18 +40,9 @@ namespace EdgixshuaMediaLibrary.DataLayer
         {
             return MapVideoGames(Entities.Video_Games.Where(w => w.Title.Contains(title)).ToList());
         }
-
+        
         public bool CheckIfGameExists(string gameTitle, string gameEdition, string gamePlatform)
-        {
-            if (!(Entities.Video_Games.Any(game => game.Title == gameTitle && game.Platform == gamePlatform && game.Edition == gameEdition)))
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
+            => (!(Entities.Video_Games.Any(game => game.Title == gameTitle && game.Platform == gamePlatform && game.Edition == gameEdition)));
 
         public void AddNewGame(string gameTitle, string gameEdition, string gamePlatform, int gameYear)
         {
