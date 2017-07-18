@@ -1,4 +1,5 @@
-﻿using EdgixshuaMediaLibrary.DataLayer;
+﻿using System;
+using EdgixshuaMediaLibrary.DataLayer;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Data.Entity;
 using AutoMapper;
@@ -7,6 +8,8 @@ using Shouldly;
 using System.Collections.Generic;
 using Moq;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using EdgixshuaMediaLibrary.VideoGames;
 
 namespace MediaLibraryTests
 {
@@ -63,13 +66,14 @@ namespace MediaLibraryTests
                     Platform = "Gamecube",
                     Year = 2002
                 }
-            }.AsQueryable();
+            };
 
             var mockSet = new Mock<DbSet<Video_Games>>();
-            mockSet.As<IQueryable<Video_Games>>().Setup(m => m.Provider).Returns(games.Provider);
-            mockSet.As<IQueryable<Video_Games>>().Setup(m => m.Expression).Returns(games.Expression);
-            mockSet.As<IQueryable<Video_Games>>().Setup(m => m.ElementType).Returns(games.ElementType);
-            mockSet.As<IQueryable<Video_Games>>().Setup(m => m.GetEnumerator()).Returns(games.GetEnumerator());
+            mockSet.As<IQueryable<Video_Games>>().Setup(m => m.Provider).Returns(games.AsQueryable().Provider);
+            mockSet.As<IQueryable<Video_Games>>().Setup(m => m.Expression).Returns(games.AsQueryable().Expression);
+            mockSet.As<IQueryable<Video_Games>>().Setup(m => m.ElementType).Returns(games.AsQueryable().ElementType);
+            mockSet.As<IQueryable<Video_Games>>().Setup(m => m.GetEnumerator()).Returns(games.AsQueryable().GetEnumerator());
+            mockSet.Setup(m => m.Add(It.IsAny<Video_Games>())).Callback<Video_Games>(game => games.Add(game));
 
             var mockContext = new Mock<MediaLibraryEntities>();
             mockContext.Setup(s => s.Video_Games).Returns(mockSet.Object);
