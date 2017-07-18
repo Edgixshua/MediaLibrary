@@ -4,10 +4,11 @@ using EdgixshuaMediaLibrary.VideoGames;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using EdgixshuaMediaLibrary.VideoGames.DataLayer;
 
 namespace EdgixshuaMediaLibrary.DataLayer
 {
-    public class VideoGamesRespository
+    public class VideoGamesRespository : IVideoGamesRepository
     {
         public VideoGamesRespository(MediaLibraryEntities entities)
         {
@@ -24,19 +25,19 @@ namespace EdgixshuaMediaLibrary.DataLayer
         private List<VideoGame> MapVideoGames(object value)
             => Mapper.Map<List<VideoGame>>(value);
 
-        public List<VideoGame> GetEntireVideoGameLibrary()
+        public List<VideoGame> ReturnAll()
             => MapVideoGames(Entities.Video_Games.ToList());
         
-        public List<VideoGame> SearchByPlatform(string platformName)
+        public List<VideoGame> PlatformSearch(string platformName)
             => MapVideoGames(Entities.Video_Games.Where(w => w.Platform == platformName).ToList());
 
-        public List<VideoGame> SearchByTitle(string title)
+        public List<VideoGame> TitleSearch(string title)
             => MapVideoGames(Entities.Video_Games.Where(w => w.Title.Contains(title)).ToList());
         
-        public bool CheckIfGameExists(string gameTitle, string gameEdition, string gamePlatform)
+        public bool IfExists(string gameTitle, string gameEdition, string gamePlatform)
             => (!(Entities.Video_Games.Any(game => game.Title == gameTitle && game.Platform == gamePlatform && game.Edition == gameEdition)));
 
-        public void AddNewGame(string gameTitle, string gameEdition, string gamePlatform, int gameYear)
+        public void Add(string gameTitle, string gameEdition, string gamePlatform, int gameYear)
         {
             VideoGames.Database.Video_Games videoGame = new VideoGames.Database.Video_Games
             {

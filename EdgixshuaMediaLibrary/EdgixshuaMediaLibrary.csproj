@@ -95,11 +95,12 @@
     <Compile Include="VideoGames\Database\Video_Games.cs">
       <DependentUpon>MediaLibrary.tt</DependentUpon>
     </Compile>
+    <Compile Include="VideoGames\DataLayer\IVideoGamesRepository.cs" />
     <Compile Include="VideoGames\DataLayer\MappingConfig.cs" />
     <Compile Include="VideoGames\DataLayer\VideoGamesRespository.cs" />
     <Compile Include="VideoGames\Models\GamePlatforms.cs" />
     <Compile Include="VideoGames\Models\VideoGame.cs" />
-    <Compile Include="VideoGames\Utilities\Connection.cs" />
+    <Compile Include="VideoGames\Services\VideoGameService.cs" />
     <Compile Include="VideoGames\Views\Add_New_Game.xaml.cs">
       <DependentUpon>Add_New_Game.xaml</DependentUpon>
     </Compile>

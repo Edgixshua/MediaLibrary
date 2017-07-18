@@ -85,7 +85,7 @@ namespace MediaLibraryTests
         public void ReturnVideoGame()
         {
             var mockRepo = SetupMockRepository();
-            var gameList = mockRepo.GetEntireVideoGameLibrary();
+            var gameList = mockRepo.ReturnAll();
 
             gameList.ShouldNotBeNull();
         }
@@ -94,7 +94,7 @@ namespace MediaLibraryTests
         public void CheckIfVideoGameExists()
         {
             var mockRepo = SetupMockRepository();
-            var game = mockRepo.CheckIfGameExists("Rocket League", "Standard", "Playstation 4");
+            var game = mockRepo.IfExists("Rocket League", "Standard", "Playstation 4");
 
             game.ShouldNotBeNull();
         }
@@ -103,7 +103,7 @@ namespace MediaLibraryTests
         public void ReturnEnitireVideoGameLibrary()
         {
             var mockRepo = SetupMockRepository();
-            var gameList = mockRepo.GetEntireVideoGameLibrary();
+            var gameList = mockRepo.ReturnAll();
 
             gameList.First().Title.ShouldBe("Rocket League");
             gameList.Last().Title.ShouldBe("Metroid Prime");
@@ -113,7 +113,7 @@ namespace MediaLibraryTests
         public void ReturnVideoGamesByPlatform()
         {
             var mockRepo = SetupMockRepository();
-            var gameList = mockRepo.SearchByPlatform("Gamecube");
+            var gameList = mockRepo.PlatformSearch("Gamecube");
 
             gameList.First().Title.ShouldBe("Metroid Prime");
         }
@@ -122,7 +122,7 @@ namespace MediaLibraryTests
         public void ReturnVideoGamesByExactTitle()
         {
             var mockRepo = SetupMockRepository();
-            var gameList = mockRepo.SearchByTitle("Dragonball Budokai Tenkaichi 2");
+            var gameList = mockRepo.TitleSearch("Dragonball Budokai Tenkaichi 2");
 
             gameList.First().Title.ShouldBe("Dragonball Budokai Tenkaichi 2");
         }
@@ -131,7 +131,7 @@ namespace MediaLibraryTests
         public void ReturnVideoGamesByTitleContainingWord()
         {
             var mockRepo = SetupMockRepository();
-            var gameList = mockRepo.SearchByTitle("Dragon");
+            var gameList = mockRepo.TitleSearch("Dragon");
 
             gameList.First().Title.ShouldBe("Dragonball Budokai Tenkaichi 2");
         }
@@ -140,7 +140,7 @@ namespace MediaLibraryTests
         public void AddNewGameToRepo()
         {
             var mockRepo = SetupMockRepository();
-            mockRepo.AddNewGame("FIFA 17", "Standard", "Playstation 4", 2016);
+            mockRepo.Add("FIFA 17", "Standard", "Playstation 4", 2016);
 
             mockRepo.Entities.Video_Games.Last().Title.ShouldBe("FIFA 17");
         }

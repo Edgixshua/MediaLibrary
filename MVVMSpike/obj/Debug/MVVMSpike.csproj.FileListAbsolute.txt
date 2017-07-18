@@ -1,0 +1,5 @@
+C:\Projects\Casual\MediaLibrary\MVVMSpike\obj\Debug\MVVMSpike.csprojResolveAssemblyReference.cache
+C:\Projects\Casual\MediaLibrary\MVVMSpike\obj\Debug\MainWindow.g.cs
+C:\Projects\Casual\MediaLibrary\MVVMSpike\obj\Debug\App.g.cs
+C:\Projects\Casual\MediaLibrary\MVVMSpike\obj\Debug\MVVMSpike_MarkupCompile.cache
+C:\Projects\Casual\MediaLibrary\MVVMSpike\obj\Debug\MVVMSpike_MarkupCompile.lref

@@ -5,17 +5,17 @@ namespace EdgixshuaMediaLibrary.Controllers
 {
     class VideoGamesController
     {
-        VideoGamesRespository Repository = new VideoGamesRespository();
+        VideoGamesService service = new VideoGamesService();
 
         public void AddGameToLibrary(string gameTitle, string gameEdition, string gamePlatform, int gameYear)
         {
-            if (Repository.CheckIfGameExists(gameTitle, gameEdition, gamePlatform) == true)
+            if (service.CheckIfGameExists(gameTitle, gameEdition, gamePlatform) == true)
             {
                 MessageBox.Show(gameTitle + " - " + gameEdition + " Edition " + "for " + gamePlatform + " already exists in the library");
             }
             else
             {
-                Repository.AddNewGame(gameTitle, gameEdition, gamePlatform, gameYear);
+                service.AddNewGame(gameTitle, gameEdition, gamePlatform, gameYear);
 
                 MessageBox.Show(gameTitle + " has been successfully added to the library");
             }
@@ -23,7 +23,7 @@ namespace EdgixshuaMediaLibrary.Controllers
 
         public int TotalGameCount()
         {
-            return Repository.GetEntireVideoGameLibrary().Count;
+            return service.GetEntireVideoGameLibrary().Count;
         }
     }
 }

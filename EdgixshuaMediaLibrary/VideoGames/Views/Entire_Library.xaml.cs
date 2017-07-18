@@ -12,7 +12,7 @@ namespace EdgixshuaMediaLibrary.Video_Games
     {
         VideoGamesController controller = new VideoGamesController();
 
-        VideoGamesRespository Repository = new VideoGamesRespository();
+        VideoGamesService service = new VideoGamesService();
 
         public Entire_Library()
         {
@@ -22,8 +22,8 @@ namespace EdgixshuaMediaLibrary.Video_Games
         }
 
         private void dataGrid_Loaded(object sender, RoutedEventArgs e)
-        {    
-            dataGrid.ItemsSource = Repository.GetEntireVideoGameLibrary().ToList().OrderBy(o => o.Title);
+        {
+            dataGrid.ItemsSource = service.GetEntireVideoGameLibrary().ToList().OrderBy(o => o.Title);
         }
 
         private void Game_Return_Button_Click(object sender, RoutedEventArgs e)
@@ -35,7 +35,7 @@ namespace EdgixshuaMediaLibrary.Video_Games
 
         private void Refresh_Button_Click(object sender, RoutedEventArgs e)
         {
-            var gameList = Repository.GetEntireVideoGameLibrary();
+            var gameList = service.GetEntireVideoGameLibrary();
 
             dataGrid.ItemsSource = gameList.OrderBy(o => o.Title);
 

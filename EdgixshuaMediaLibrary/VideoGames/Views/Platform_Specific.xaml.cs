@@ -16,7 +16,7 @@ namespace EdgixshuaMediaLibrary.VideoGames
 
         VideoGamesController Controller = new VideoGamesController();
 
-        VideoGamesRespository Repository = new VideoGamesRespository();
+        VideoGamesService service = new VideoGamesService();
 
         public Platform_Specific()
         {
@@ -42,7 +42,7 @@ namespace EdgixshuaMediaLibrary.VideoGames
         {
             GamePlatforms platformToSearch = platformComboBox.SelectedItem as GamePlatforms;
 
-            var videoGameList = Repository.SearchByPlatform(platformToSearch.Name);
+            var videoGameList = service.SearchByPlatform(platformToSearch.Name);
 
             dataGrid.ItemsSource = videoGameList.OrderBy(o => o.Title);
 

@@ -20,7 +20,7 @@ namespace EdgixshuaMediaLibrary.VideoGames
     /// </summary>
     public partial class Title_Specific : Window
     {
-        VideoGamesRespository Repository = new VideoGamesRespository();
+        VideoGamesService service = new VideoGamesService();
 
         public Title_Specific()
         {
@@ -29,7 +29,7 @@ namespace EdgixshuaMediaLibrary.VideoGames
 
         private void Load_Data(object sender, RoutedEventArgs e)
         {
-            dataGrid.ItemsSource = Repository.SearchByTitle(titleSearchTextBox.Text).OrderBy(o => o.Title);
+            dataGrid.ItemsSource = service.SearchByTitle(titleSearchTextBox.Text).OrderBy(o => o.Title);
         }
 
         private void Game_Return_Button_Click(object sender, RoutedEventArgs e)
