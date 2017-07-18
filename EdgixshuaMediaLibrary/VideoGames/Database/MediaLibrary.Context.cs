@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EdgixshuaMediaLibrary.Database
+namespace EdgixshuaMediaLibrary.VideoGames.Database
 {
     using System;
     using System.Data.Entity;

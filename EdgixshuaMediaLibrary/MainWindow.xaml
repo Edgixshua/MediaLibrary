@@ -9,7 +9,6 @@
     <Grid>
         <Label x:Name="titleLabel" Content="Media Library" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="25px" Margin="172,10,0,0"/>
         <Button x:Name="viewGamesButton" Click="Video_Game_Button_Click" Content="View Video Games" HorizontalAlignment="Left" VerticalAlignment="Top" Width="115" FontWeight="Bold" Margin="33,84,0,0" Height="54"/>
-        <Button x:Name="dvdButton" Click="Dvd_Button_Click" Content="View DVD's" HorizontalAlignment="Left" VerticalAlignment="Top" Width="115" FontWeight="Bold" Margin="33,190,0,0" Height="52"/>
 
     </Grid>
 </Window>

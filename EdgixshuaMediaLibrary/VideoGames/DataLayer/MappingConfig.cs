@@ -9,8 +9,8 @@ namespace EdgixshuaMediaLibrary.DataLayer
         {
             Mapper.Initialize(cfg =>
             {
-                cfg.CreateMap<Database.Video_Games, VideoGame>();
-                cfg.CreateMap<VideoGame, Database.Video_Games>();
+                cfg.CreateMap<VideoGames.Database.Video_Games, VideoGame>();
+                cfg.CreateMap<VideoGame, VideoGames.Database.Video_Games>();
             });
         }
     }

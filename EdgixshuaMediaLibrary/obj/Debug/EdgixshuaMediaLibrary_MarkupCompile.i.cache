@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Projects\Casual\MediaLibrary\EdgixshuaMediaLibrary\App.xaml
-7-975718536
-2502484314
-251606140936
+61346280103
+2-702386392
+24-2110370282
 20633028332
-DVD's\Dvd_Window.xaml;MainWindow.xaml;VideoGames\Add_New_Game.xaml;VideoGames\Entire_Library.xaml;VideoGames\Platform_Specific.xaml;VideoGames\Title_Specific.xaml;VideoGames\Video_Game_Window.xaml;
+MainWindow.xaml;VideoGames\Views\Add_New_Game.xaml;VideoGames\Views\Entire_Library.xaml;VideoGames\Views\Platform_Specific.xaml;VideoGames\Views\Title_Specific.xaml;VideoGames\Views\Video_Game_Window.xaml;
 
-True
+False
 

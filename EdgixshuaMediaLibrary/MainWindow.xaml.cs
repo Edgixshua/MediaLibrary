@@ -24,13 +24,5 @@ namespace EdgixshuaMediaLibrary
             this.Hide();
             videoGameWindow.Show();
         }
-
-        private void Dvd_Button_Click(object sender, RoutedEventArgs e)
-        {
-            Dvd_Window dvdWindow = new Dvd_Window();
-            dvdWindow.Owner = this;
-            this.Hide();
-            dvdWindow.Show();
-        }
     }
 }

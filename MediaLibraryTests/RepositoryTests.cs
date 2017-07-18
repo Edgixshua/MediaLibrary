@@ -3,13 +3,11 @@ using EdgixshuaMediaLibrary.DataLayer;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Data.Entity;
 using AutoMapper;
-using EdgixshuaMediaLibrary.Database;
+using EdgixshuaMediaLibrary.VideoGames.Database;
 using Shouldly;
 using System.Collections.Generic;
 using Moq;
 using System.Linq;
-using System.Runtime.Remoting.Metadata.W3cXsd2001;
-using EdgixshuaMediaLibrary.VideoGames;
 
 namespace MediaLibraryTests
 {
@@ -96,9 +94,9 @@ namespace MediaLibraryTests
         public void CheckIfVideoGameExists()
         {
             var mockRepo = SetupMockRepository();
-            var gameExists = mockRepo.CheckIfGameExists("Rocket League", "Standard", "Playstation 4");
+            var game = mockRepo.CheckIfGameExists("Rocket League", "Standard", "Playstation 4");
 
-            gameExists.ShouldBe(true);
+            game.ShouldNotBeNull();
         }
 
         [TestMethod]

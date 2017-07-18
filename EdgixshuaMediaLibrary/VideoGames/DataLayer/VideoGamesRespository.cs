@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using EdgixshuaMediaLibrary.Database;
+using EdgixshuaMediaLibrary.VideoGames.Database;
 using EdgixshuaMediaLibrary.VideoGames;
 using System.Collections.Generic;
 using System.Data;
@@ -38,7 +38,7 @@ namespace EdgixshuaMediaLibrary.DataLayer
 
         public void AddNewGame(string gameTitle, string gameEdition, string gamePlatform, int gameYear)
         {
-            Database.Video_Games videoGame = new Database.Video_Games
+            VideoGames.Database.Video_Games videoGame = new VideoGames.Database.Video_Games
             {
                 Title = gameTitle,
                 Edition = gameEdition,

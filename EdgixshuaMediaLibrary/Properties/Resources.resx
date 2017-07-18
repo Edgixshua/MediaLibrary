@@ -119,45 +119,45 @@
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="asus_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\VideoGames\VideoGameAssets\asus_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\VideoGames\Views\VideoGameAssets\asus_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ds_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\VideoGames\VideoGameAssets\ds_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\VideoGames\Views\VideoGameAssets\ds_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gameboyadvance_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\VideoGames\VideoGameAssets\gameboyadvance_icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\VideoGames\Views\VideoGameAssets\gameboyadvance_icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gamecube_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\VideoGames\VideoGameAssets\gamecube_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\VideoGames\Views\VideoGameAssets\gamecube_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="playstation2_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\VideoGames\VideoGameAssets\playstation2_icon.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\VideoGames\Views\VideoGameAssets\playstation2_icon.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="playstation_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\VideoGames\VideoGameAssets\playstation_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\VideoGames\Views\VideoGameAssets\playstation_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ps4_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\VideoGames\VideoGameAssets\ps4_icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\VideoGames\Views\VideoGameAssets\ps4_icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="psp_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\VideoGames\VideoGameAssets\psp_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\VideoGames\Views\VideoGameAssets\psp_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sony_ps4_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\VideoGames\VideoGameAssets\sony-ps4-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\VideoGames\Views\VideoGameAssets\sony-ps4-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="virtualconsole_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\VideoGames\VideoGameAssets\virtualconsole_icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\VideoGames\Views\VideoGameAssets\virtualconsole_icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wii_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\VideoGames\VideoGameAssets\wii_icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\VideoGames\Views\VideoGameAssets\wii_icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="xbox_360_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\VideoGames\VideoGameAssets\xbox_360_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\VideoGames\Views\VideoGameAssets\xbox_360_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="xbox_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\VideoGames\VideoGameAssets\xbox_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\VideoGames\Views\VideoGameAssets\xbox_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_3ds_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\VideoGames\VideoGameAssets\3ds_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\VideoGames\Views\VideoGameAssets\3ds_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

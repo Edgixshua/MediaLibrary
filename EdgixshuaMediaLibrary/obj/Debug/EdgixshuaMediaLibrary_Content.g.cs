@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("database/medialibrary.context.tt")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("database/medialibrary.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("videogames/database/medialibrary.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("videogames/database/medialibrary.tt")]
 
 
